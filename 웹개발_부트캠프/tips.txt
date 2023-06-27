@@ -3,3 +3,5 @@ https://developer.mozilla.org/ko/
 검색 팁 : html form mdn 이라고 치면 html의 form 에 대해서 검색됨
 
 lorem + tap 을 하면 junk text가 생성됨
+
+이미지를 가져올 떄 구글검색 - 도구 - 사용권 확인하고 이미지 불러오기
