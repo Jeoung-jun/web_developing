@@ -1,0 +1,5 @@
+웹과 관련된 레퍼런스들이 모여있는 커뮤니티
+https://developer.mozilla.org/ko/
+검색 팁 : html form mdn 이라고 치면 html의 form 에 대해서 검색됨
+
+lorem + tap 을 하면 junk text가 생성됨
