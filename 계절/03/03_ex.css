@@ -1,0 +1,11 @@
+header, footer{
+    background-color: skyblue;
+    color: aliceblue;
+    text-align: center;
+}
+
+nav{
+    background-color: blueviolet;
+    text-align: center;
+}
+
