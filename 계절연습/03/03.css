@@ -1,0 +1,42 @@
+/* #3F59FA
+#377BDE
+#49BDF5
+#37D2DE
+#3FFAD3 */
+
+
+header, footer{
+    padding: 20px;
+    background-color: #3F59FA;
+    text-align: center;
+    margin-top: -40px;
+}
+
+footer{
+    margin-top: 10px;
+}
+
+nav{
+    background-color: #37D2DE;
+    text-align: center ;
+    padding: 20px;
+    margin: 5px 0px;
+}
+
+h1{
+    background-color: #3FFAD3;
+    margin-left: 5px;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+section{
+    border-width: 3px;
+    border-style: solid;
+    border-color: #377BDE;
+    margin: 15px;
+}
+
+ul{
+    margin-left: 10px;
+}

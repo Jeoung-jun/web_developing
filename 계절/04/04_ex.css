@@ -15,7 +15,7 @@ nav{
     border-style: solid;
     border-color: orange;
     border-width: 3px 3px 3px 15px;
-    padding: 10px;
+    padding: 10px
 }
 
 .c2 h2{
@@ -24,6 +24,8 @@ nav{
     border-width: 3px 3px 3px 15px;
     padding: 10px;
 }
+
+
 
 #s4 p{
     color: green;

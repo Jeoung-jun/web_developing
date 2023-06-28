@@ -4,45 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>자기소개 페이지</title>
+    <style>
+        /* CSS 스타일 시트 */
+        header {
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: lightgray;
+            padding: 10px;
+        }
+
+        .section-container {
+            overflow: auto;
+        }
+
+        .left-section {
+            width: 50%;
+            float: left;
+            padding: 20px;
+        }
+
+        .right-section {
+            width: 50%;
+            float: right;
+            padding: 20px;
+            margin-top: -150px;
+        }
+
+        .clear {
+            clear: both;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>자기소개</h1>
+        <img src="your_photo.jpg" alt="Your Photo">
+        <h1>Your Name</h1>
     </header>
-    
-    <main>
-        <section>
-            <h2>안녕하세요!</h2>
-            <p>저는 [이름]입니다. [나이]살이며, [직업 또는 전공]으로 일하고 있습니다.</p>
-            <p>관심 분야는 [관심 분야]이며, [관련 경험 또는 업적]을 가지고 있습니다.</p>
-        </section>
-        
-        <section>
-            <h2>학력</h2>
-            <ul>
-                <li>[대학교 이름] - [전공] 학위 취득 (연도)</li>
-                <li>[고등학교 이름] 졸업 (연도)</li>
-            </ul>
-        </section>
-        
-        <section>
-            <h2>업무 경력</h2>
-            <ul>
-                <li>[회사 이름] - [직위] (연도)</li>
-                <li>[회사 이름] - [직위] (연도)</li>
-            </ul>
-        </section>
-        
-        <section>
-            <h2>보유 기술</h2>
-            <ul>
-                <li>[기술 1]</li>
-                <li>[기술 2]</li>
-                <li>[기술 3]</li>
-            </ul>
-        </section>
-    </main>
-    
+
+    <nav>
+        <a href="#info">정보</a>
+        <a href="#education">학력사항</a>
+        <a href="#qualification">자격사항</a>
+        <a href="#introduction">자기소개</a>
+    </nav>
+
+    <div class="section-container">
+        <div class="left-section">
+            <section id="info">
+                <h2>정보</h2>
+                <p>여기에 정보 관련 내용을 작성하세요.</p>
+            </section>
+        </div>
+
+        <div class="right-section">
+            <section id="education">
+                <h2>학력사항</h2>
+                <p>여기에 학력사항 관련 내용을 작성하세요.</p>
+            </section>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+    <div class="section-container">
+        <div class="left-section">
+            <section id="qualification">
+                <h2>자격사항</h2>
+                <p>여기에 자격사항 관련 내용을 작성하세요.</p>
+            </section>
+        </div>
+
+        <div class="right-section">
+            <section id="introduction">
+                <h2>자기소개</h2>
+                <p>여기에 자기소개 관련 내용을 작성하세요.</p>
+            </section>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
     <footer>
         <p>저에 대해 더 알고 싶다면 이메일 [이메일 주소]로 연락주세요!</p>
     </footer>
