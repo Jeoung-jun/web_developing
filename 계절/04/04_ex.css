@@ -1,32 +1,63 @@
+/* 
+#004BB3
+#006AFF
+#3971BF
+#4D97FF
+#00357F
+*/
+
 header, footer{
-    background-color: blue;
+    background-color: #00357F;
     color: aliceblue;
-    text-align: center;
+    text-align: left;
     padding: 10px;
 }
 
+
+
 nav{
-    background-color: rgb(100, 0, 100, 0.3);
-    text-align: center;
+    background-color: #3971BF;
+    text-align: left;
     padding: 20px;
+}
+
+
+
+section{
+    margin: 10px;
+    width: 45%;
+    float: left;
 }
 
 .c1 h2{
     border-style: solid;
-    border-color: orange;
+    border-color: #00357F;
     border-width: 3px 3px 3px 15px;
-    padding: 10px
+    padding: 10px;
+    margin: 5px;
+}
+
+.c1{
+    border: solid #00357F 2px;
 }
 
 .c2 h2{
     border-style: solid;
-    border-color: darkolivegreen;
+    border-color: #4D97FF;
     border-width: 3px 3px 3px 15px;
     padding: 10px;
+    margin: 5px;
 }
 
+.c2{
+    border: solid #4D97FF 2px;
+}
 
 
 #s4 p{
     color: green;
+}
+
+footer{
+    clear: both;
 }

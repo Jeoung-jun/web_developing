@@ -14,20 +14,28 @@ nav{
     margin: 5px 0px;
     padding: 10px;
     text-align: center;
+    font-size: 20px;
 }
 section{
     border-color: lightcoral;
     border-style: solid;
     border-width: 3px;   
     margin: 15px;
+    width: 45%;
+    height: 150px;
+    float:left;
+}
+footer{
+    clear:both;
 }
 
-h1{
+section > h1{
     background-color: lightcoral;
     border: 5px;
     color: white;
     margin: 3px;
     padding: 3px;
+    
 }
 
 ul{
@@ -35,4 +43,21 @@ ul{
 }
 ol{
     list-style-type: upper-roman;
+}
+
+a{
+    display: inline-block;
+    width: 100px;
+    height: 20px;
+}
+
+a:link ,a:visited{
+    text-decoration: none;
+    color: blue;
+    padding: 10px;
+
+}
+
+a:hover, a:active{
+    background-color: aqua;
 }
