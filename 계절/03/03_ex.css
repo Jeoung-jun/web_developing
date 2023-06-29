@@ -1,30 +1,38 @@
+/* #995CFA
+   #FFC95E
+   #E34F49
+   #49C8E3
+   #66FF52
+   */
+
 header, footer{
-    background-color: blue;
-    color: aliceblue;
+    background-color: #995CFA;
+    color: white;
     text-align: center;
     padding: 10px;
+    margin-top: -10px;
 }
 
 nav{
-    background-color: rgb(100, 0, 100, 0.3);
     text-align: center;
-    padding: 20px;
+    background-color: #66FF52;
+    padding: 10px;
+    margin: 0px;
 }
 
 .c1 h2{
-    border-style: solid;
-    border-color: orange;
-    border-width: 3px 3px 3px 15px;
+    border: solid #E34F49 3px;
+    border-left-width: 10px;
     padding: 10px;
 }
 
 .c2 h2{
-    border-style: solid;
-    border-color: darkolivegreen;
-    border-width: 3px 3px 3px 15px;
+    border: solid #49C8E3 3px;
+    border-left-width: 10px;
     padding: 10px;
 }
 
-#s4 p{
-    color: green;
+#s4 div{
+    color: #66FF52;
+    margin-bottom: 30px;
 }
