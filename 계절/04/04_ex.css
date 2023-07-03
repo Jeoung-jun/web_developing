@@ -5,28 +5,64 @@
 #4D97FF
 #00357F
 */
-
-header, footer{
-    background-color: #00357F;
-    color: aliceblue;
-    text-align: left;
-    padding: 10px;
+body{
+    margin: 0px;
+    padding: 0px;
 }
 
+header{
+    background-color: #00357F;
+    color: aliceblue;
+    text-align: center;
+    padding: 10px;
+    height: 200px;
+}
 
+div{
+    float:left;
+    margin: 20px;
+}
+
+header img{
+    width: 160px;
+    height: 160px;
+}
 
 nav{
+    clear:both;
     background-color: #3971BF;
     text-align: left;
     padding: 20px;
+    font-size: 20px;
+}
+
+nav a{
+    text-decoration: none;
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+}
+
+nav a:link, nav a:visited{
+    background-color: #3971BF;
+    color: white;
+}
+
+nav a:hover, nav a:active{
+    background-color: white;
+    color:blue;
 }
 
 
 
 section{
+    box-sizing: border-box;
     margin: 10px;
-    width: 45%;
+    /* padding: 10px; */
+    width: 47%;
     float: left;
+    height: 200px;
+    
 }
 
 .c1 h2{
@@ -54,10 +90,20 @@ section{
 }
 
 
-#s4 p{
+section p{
     color: green;
 }
 
+section p, section ul, section ol{
+    margin-left: 30px;
+}
+
+
 footer{
     clear: both;
+    background-color: #00357F;
+    color: aliceblue;
+    text-align: left;
+    padding: 10px;
+    margin-top: 20px;
 }
