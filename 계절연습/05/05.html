@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML 연습</title>
+</head>
+<body>
+    <form name= "myform" method="get" action="05.php">
+        <div class="c1">
+            개인 신청 자료
+        </div>
+
+        <div class="c2">
+            <p>
+                <label for="text_name">성명</label> <br>
+                <input type="text" name= "text_name"id="text_name" placeholder="이름"><br>
+
+                <label for="text_mail">E-mail</label><br>
+                <input type="text" name="text_mail" id="text_mail" placeholder="메일"><br>
+
+
+                <label for="text_year">생년월일</label><br>
+                <input type="text" name="text_year" id="text_year"placeholder="월">
+
+                <select name="sel_mon" id="sel_mon">
+                    <option value="1">1월</option>
+                    <option value="2">2월</option>
+                    <option value="3">3월</option>
+                    <option value="4">4월</option>
+                    <option value="5">5월</option>
+                    <option value="6">6월</option>
+                    <option value="7" selected>7월</option>
+                    <option value="8">8월</option>
+                    <option value="9">9월</option>
+                    <option value="10">10월</option>
+                    <option value="11">11월</option>
+                    <option value="12">12월</option>
+                </select>
+
+                <input type="text" name="text_day" id="text_day" placeholder="일">
+            </p>
+
+
+            <p>
+                <label for="r_gender_man">남</label>
+                <input type="radio" name="r_gender" id="r_gender_man">
+                <label for="r_gender_woman">여</label>
+                <input type="radio" name="r_gender" id="r_gender_woman">
+            </p>
+
+            <p>
+                <label for="">관심분야</label> <br>
+                <label for="ck_c">C</label>
+                <input type="checkbox" name="ck_c" id="ck_c">
+                <label for="ck_python">python</label>
+                <input type="checkbox" name="ck_python" id="ck_python">
+                <label for="ck_R">R</label>
+                <input type="checkbox" name="ck_R" id="ck_R">
+                <label for="ck_app">앱인벤터</label>
+                <input type="checkbox" name="ck_app" id="ck_app">
+            </p>
+            <p>
+                <label for="txt_contents">기타</label>
+                <textarea name="txt_content" id="txt_content" cols="30" rows="10"></textarea>
+            </p>
+            <p>
+                <input type="submit" value="확인">
+                <input type="reset" value="취소">
+            </p>
+        </div>
+    </form>
+</body>
+</html>

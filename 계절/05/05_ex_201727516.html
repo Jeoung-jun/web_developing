@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05장 form 응용문제</title>
+</head>
+<body>
+    <form name="응용문제" method="get" action="05_ex.php">
+        <div id="box1">
+            <p>
+                당신이 좋아하는 과일을 선택해 보세요
+            </p>
+        </div>
+
+        <div id="box2">
+            <p>
+                <label for="txt_name">성명</label> <br>
+                <input type="text" name="txt_name" id="txt_name" placeholder="성명 입력">
+            </p>
+
+            <p>
+                <label for="txt_pw">비밀번호</label> <br>
+                <input type="text" name="txt_pw" id="txt_pw" placeholder="비밀번호 입력">
+            </p>
+
+            <p>
+                <label for="">좋아하는 과일을 선택하세요.</label> <br>
+                <span>
+                    <img src="" alt="">
+                    <input type="radio" name="fruit" id="strawberry">
+                </span>
+                <span>
+                    <img src="" alt="">
+                    <input type="radio" name="fruit" id="banana">
+                </span>
+                <span>
+                    <img src="" alt="">
+                    <input type="radio" name="fruit" id="apple">
+                </span>
+                <span>
+                    <img src="" alt="">
+                    <input type="radio" name="fruit" id="water emllon">
+                </span>
+            </p>
+
+            <p>
+                <input type="submit" value="결과보기">
+                <input type="reset" value="취소">
+            </p>
+        </div>
+    </form> 
+</body>
+</html>

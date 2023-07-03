@@ -1,0 +1,107 @@
+/*  #2E7F7F
+    #5CFFFF
+    #7EBFBF
+    #A8FFFF
+    #2E7F7F
+*/
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    background-color: #2E7F7F;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    height: 200px;
+}
+
+h1{
+    font-size: 40px;
+}
+
+header img{
+    width: 180px;
+    height: 180px;
+}
+
+div{
+    float: left;
+    margin: 10px;
+}
+
+nav{
+    background-color: #5CFFFF;
+    clear: both;
+    padding: 10px;
+}
+
+section{
+    float: left;
+    box-sizing: border-box;
+    width: 47%;
+    margin: 20px;
+    height: 200px;
+}
+
+.c1{
+    border: #7EBFBF solid 3px;
+}
+
+.c1 h2{
+    border-color: #7EBFBF;
+    border-style: solid;
+    border-width: 5px 5px 5px 15px;
+    margin: 10px 5px;
+}
+
+.c2{
+    border: #A8FFFF solid 3px;
+}
+
+.c2 h2{
+    border-color: #A8FFFF;
+    border-style: solid;
+    border-width: 5px 5px 5px 15px;
+    margin: 10px 5px;
+}
+
+section h2{
+    font-size: 30px;
+    padding : 5px;
+}
+
+section p{
+    color: green;
+}
+
+footer{
+    clear: both;
+    background-color: #2E7F7F;
+    color: white;
+    text-align: left;
+    padding: 10px;
+}
+
+nav a{
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    width: 120px;
+}
+
+a:hover, a:active{
+    color: white;
+    background-color: black;
+}
+
+a:link, a:visited{
+    background-color: white;
+    color:blue;
+}
+
+section ul, section p, section ol{
+    margin: 15px;
+}
