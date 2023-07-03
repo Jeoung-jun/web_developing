@@ -1,0 +1,103 @@
+/*  #0089B3
+    #00C3FF
+    #39A0BF
+    #4DD5FF
+    #00627F
+*/
+
+header, footer{
+    background-color: #0089B3;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+header img{
+    text-align: left;
+    float: left;
+}
+
+header{
+    padding: 50px;
+}
+
+nav{
+    text-align: left;
+    background-color: #00C3FF;
+    padding:20px;
+    font-size: 20px;
+    clear: both;
+}
+
+section{
+    width: 46%;
+    font-size: 20px;
+    float: left;
+    margin: 10px;
+}
+
+section p{
+    color: green;
+}
+
+.c1{
+    border-style: solid;
+    border-width: 3px;
+    border-color: #39A0BF;
+    padding: 15px;
+    margin: 10px 0px;
+    height: 220px;
+}
+
+.c1 h1{
+    border-style: solid;
+    border-width: 5px;
+    border-left-width: 20px;
+    border-color: #39A0BF;
+    padding: 15px;
+    margin: 5px;
+}
+
+.c2{
+    border-style: solid;
+    border-width: 3px;
+    border-color: #4DD5FF;
+    padding: 15px;
+    margin: 10px 0px;
+    height: 220px;
+}
+
+.c2 h1{
+    border-style: solid;
+    border-width: 5px;
+    border-left-width: 20px;
+    border-color: #4DD5FF;
+    padding: 15px;
+    margin: 5px;
+}
+
+
+H1{
+    font-size: 30px;
+}
+
+footer{
+    clear: both;
+}
+
+a{
+    display: inline-blocks;
+    width: 100px;
+    height: 20px;
+}
+
+a:link, a:visited{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    
+}
+
+a:hover, a:active{
+    background-color: #00627F;
+}
