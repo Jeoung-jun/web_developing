@@ -1,0 +1,61 @@
+form{
+    width: 50%;
+}
+
+.c1{
+    background-color: #DB1109;
+    color: white;
+    border: 2px solid #DB1109 ;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.c2{
+    width: 400px;
+    padding: 10px;
+}
+
+span{
+    border: 1px solid gray;
+    padding: 10px 40px;
+    display: inline-block;
+    height: 40px;
+    width: 400px;
+    box-sizing: border-box;
+}
+
+input[type=text]{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+#txt_year, #sel_mon, #txt_day{
+    width: 30%;
+    height: 40px;
+}
+
+#sel_mon{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+input[type=textarea]{
+    width: 100%;
+    height: 100px;
+}
+
+input[type=submit], input[type=reset]{
+    width: 48%;
+    background-color: #DB1109;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-right: 1%;
+}
+
