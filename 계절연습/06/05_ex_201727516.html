@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 201727516 김정준 -->
+<head>
+    <meta charset="UTF-8">
+    <title>05장 form 응용문제</title>
+    <link rel="stylesheet" href="./05_ex.css">
+</head>
+<body>
+    <form name="05_ex_form" method="get" action="text.php">
+        <div class="box1">
+            당신이 좋아하는 과일을 선택해 보세요
+        </div>
+
+        <div class="box2">
+            <p>
+                <label for="txt_name">성명</label> <br>
+                <input type="text" name="txt_name" id="txt_name" placeholder="성명 입력">
+            </p>
+
+            <p>
+                <label for="txt_pw">비밀번호</label> <br>
+                <input type="password" name="txt_pw" id="txt_pw" placeholder="비밀번호 입력">
+            </p>
+
+            <p>
+                <label for="fruit">좋아하는 과일을 선택하세요.</label> <br>
+                <span>
+                    <input type="radio" name="fruit" value="strawberry" id="strawberry">
+                    <label for="strawberry"><img src="./img/img1.png" alt="strawberry" ></label>
+                </span>
+                <span>
+                    <input type="radio" name="fruit" value="banana" id="banana">
+                    <label for="banana"><img src="./img/img2.png" alt="banana"></label>
+                </span>
+                <span>
+                    <input type="radio" name="fruit" value="apple" id="apple">
+                    <label for="apple"><img src="./img/img3.png" alt="apple"></label>
+                </span>
+                <span>
+                    <input type="radio" name="fruit" value="water_melon" id="water_melon">
+                    <label for="water_melon"><img src="./img/img4.png" alt="water_melon"></label>
+                </span>
+            </p>
+
+            <p>
+                <input type="submit" value="결과보기">
+                <input type="reset" value="취소">
+            </p>
+        </div>
+    </form> 
+</body>
+</html>

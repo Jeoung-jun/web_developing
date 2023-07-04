@@ -1,0 +1,55 @@
+body{
+    width: 400px;
+}
+
+.c1{
+    text-align: center;
+    background-color: green;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    
+}
+
+input[type=text]{
+    width: 100%;
+    margin-bottom: 10px;
+    height: 30px;
+}
+
+#text_year, #sel_mon, #text_day{
+    width: 30%;
+    height: 30px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+#sel_mon{
+    height: 35px;
+}
+
+span{
+    border: 1px solid gray;
+    padding: 10px 40px;
+    display: inline-block;
+    height: 50px;
+    width: 405px;
+    box-sizing: border-box;
+}
+
+textarea{
+    width: 100%;
+    height: 80px;
+    display: inline-block;
+}
+
+input[type=submit], input[type=reset]{
+    width: 45%;
+    background-color: green;
+    color: white;
+    height: 30px;
+    border: none;
+    margin-left: 10px;
+}

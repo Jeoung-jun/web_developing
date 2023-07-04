@@ -1,0 +1,50 @@
+body{
+    width: 400px;
+}
+
+.box1{
+    background-color: green;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+p>label{
+    width: 100%;
+    background-color: antiquewhite;
+    padding: 10px;
+    display: inline-block;
+}
+
+p>input[type=text], p>input[type=password]{
+    width: 99%;
+    padding: 10px;
+    display: inline-block;
+}
+
+img{
+    width: 50%;
+    height: 50%;
+}
+
+span{
+    float: left;
+    width: 45%;
+    margin: 10px;
+}
+
+input[type=submit]{
+    clear: both;
+}
+
+input[type=submit], input[type=reset]{
+    width: 45%;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    background-color: green;
+    color: white;
+}
