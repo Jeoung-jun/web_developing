@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 201727516 김정준 23/07/05 06장 Javascript 응용문제-->
+    <head>
+        <meta charset="UTF-8">
+        <title>06장 Javascript 응용문제</title>
+        <link rel="stylesheet" href="./05_ex.css">
+        <script src="./06ex.js"></script>
+    </head>
+    <body>
+        <form name="form06ex" method="get" action="text.php">
+            <div class="box1">
+                당신이 좋아하는 과일을 선택해 보세요
+            </div>
+
+            <div class="box2">
+                <p>
+                    <label for="txt_name">성명</label> <br>
+                    <input type="text" name="txt_name" id="txt_name"
+                        placeholder="성명 입력">
+                </p>
+
+                <p>
+                    <label for="txt_pw">비밀번호</label> <br>
+                    <input type="password" name="txt_pw" id="txt_pw"
+                        placeholder="비밀번호 입력">
+                </p>
+
+                <p>
+                    <label for="fruit">좋아하는 과일을 선택하세요.</label> <br>
+                    <span>
+                        <input type="radio" name="fruit" value="딸기"
+                            id="딸기">
+                        <label for="딸기"><img src="./img/img1.png"
+                                alt="딸기"></label>
+                    </span>
+                    <span>
+                        <input type="radio" name="fruit" value="바나나"
+                            id="바나나">
+                        <label for="바나나"><img src="./img/img2.png"
+                                alt="바나나"></label>
+                    </span>
+                    <span>
+                        <input type="radio" name="fruit" value="사과"
+                            id="사과">
+                        <label for="사과"><img src="./img/img3.png"
+                                alt="사과"></label>
+                    </span>
+                    <span>
+                        <input type="radio" name="fruit" value="수박"
+                            id="수박">
+                        <label for="수박"><img src="./img/img4.png"
+                                alt="수박"></label>
+                    </span>
+                </p>
+
+                <p>
+                    <input type="button" value="결과보기" onclick="show()">
+                    <input type="reset" value="취소">
+                </p>
+            </div>
+        </form>
+    </body>
+</html>

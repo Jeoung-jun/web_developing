@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>test2</title>
+        <style>
+            #msg{
+                border: 2px solid green;
+                width: 250px;
+                height: 80px;
+                margin: 10px;
+            }
+        </style>
+        <script>
+            function show(){
+                var str = "";
+                str = test2.txt.value;
+                document.getElementById("msg").innerHTML= str + "님 안녕하세요~";
+            }
+
+            function erase(){
+                document.getElementById("msg").innerHTML="";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Javascript practice</h1>
+        <form name="test2">
+            <input type="text" name="txt" id="txt">
+            <input type="button" value="confirm" onclick="show()">
+            <input type="reset" value="cancel" onclick="erase()">
+        </form>
+        <div id="msg">
+
+        </div>
+    </body>
+</html>

@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- 201727516 김정준 23.07.03 5장 form 해결문제 -->
+    <!-- 201727516 김정준 23.07.05 6장 Javascript 해결문제 -->
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="./05.css">
-        <title>05 form 실습파일</title>
+        <title>6장 Javascript 해결문제</title>
+        <script src="./06.js"></script>
     </head>
     <body>
-        <form name="05_form" method="get" action="test.php">
+        <form name="form06" method="get" action="test.php">
             <div class="c1">
                 개인 신청 자료
             </div>
@@ -77,8 +78,8 @@
                     <input type="textarea" name="txt_contents" id="txt_contents">
                 </p>
                 <p>
-                    <input type="submit" value="확인">
-                    <input type="submit" value="초기화">
+                    <input type="button" value="확인" onclick="show()">
+                    <input type="reset" value="초기화">
                 </p>
             </div>
 

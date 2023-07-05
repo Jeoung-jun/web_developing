@@ -1,8 +1,8 @@
-body{
+body {
     width: 400px;
 }
 
-.box1{
+.box1 {
     background-color: green;
     color: white;
     width: 100%;
@@ -12,35 +12,37 @@ body{
     font-size: 20px;
 }
 
-p>label{
+p>label {
     width: 100%;
     background-color: antiquewhite;
     padding: 10px;
     display: inline-block;
 }
 
-p>input[type=text], p>input[type=password]{
+p>input[type=text],
+p>input[type=password] {
     width: 99%;
     padding: 10px;
     display: inline-block;
 }
 
-img{
+img {
     width: 50%;
     height: 50%;
 }
 
-span{
+span {
     float: left;
     width: 45%;
     margin: 10px;
 }
 
-input[type=submit]{
+input[type=submit] {
     clear: both;
 }
 
-input[type=submit], input[type=reset]{
+input[type=submit],
+input[type=reset] {
     width: 45%;
     padding: 10px;
     margin: 5px;

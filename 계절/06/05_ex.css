@@ -1,7 +1,8 @@
-form{
+form {
     width: 400px;
 }
-.box1{
+
+.box1 {
     background-color: green;
     color: white;
     text-align: center;
@@ -10,22 +11,23 @@ form{
     width: 100%;
 }
 
-.box2{
+.box2 {
     margin: 10px;
     width: 400px;
 }
 
-img{
+img {
     width: 50%;
     height: 50%;
 }
 
-p>label{
+p>label {
     padding: 10px;
     background-color: antiquewhite;
     width: 100%;
     display: inline-block;
 }
+
 /* label[for=txt_name], label[for=txt_pw], label[for=fruit]{
     padding: 10px;
     background-color: antiquewhite;
@@ -33,22 +35,26 @@ p>label{
     display: inline-block;
 } */
 
-input[type=text], input[type=password]{
+input[type=text],
+input[type=password] {
     width: 100%;
     height: 30px;
     border: 1px solid gray;
 }
-span{
+
+span {
     float: left;
     margin: 10px;
     width: 40%;
 }
-input[type=submit]{
+
+input[type=submit] {
     clear: both;
     margin-right: 20px;
 }
 
-input[type=submit], input[type=reset]{
+input[type=button],
+input[type=reset] {
     width: 45%;
     height: 50px;
     margin-top: 20px;

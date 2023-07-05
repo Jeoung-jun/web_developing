@@ -1,5 +1,5 @@
 form{
-    width: 50%;
+    width: 400px;
 }
 
 .c1{
@@ -50,7 +50,7 @@ input[type=textarea]{
     height: 100px;
 }
 
-input[type=submit], input[type=reset]{
+input[type=button], input[type=reset]{
     width: 48%;
     background-color: #DB1109;
     color: white;
