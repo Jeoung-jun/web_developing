@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 23.07.05 과제 1-2 201727516김정준 -->
+    <head>
+        <meta charset="UTF-8">
+        <title>201727516김정준</title>
+        <style>
+        form{
+            width: 430px;
+        }
+        div h1{
+            background-color: mediumaquamarine;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 0px;
+        }
+™
+        .s1{
+            border: 1px solid mediumaquamarine;
+            padding: 5px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .s2{
+            padding: 10px;
+            border: 1px solid mediumaquamarine;
+        }
+
+        footer{
+            background-color: mediumaquamarine;
+            padding: 3px;
+            width: 425px;
+            margin-top: 10px;
+        }
+
+        input[type=button], input[type= reset]{
+            width: 48%;
+            margin: 3px;
+            padding: 5px;
+            border: none;
+            background-color: mediumaquamarine;
+        }
+    </style>
+        <script>
+        function show(){
+            var str = "<h1>설문완료</h1>";
+            var chboxes = document.getElementsByName("ch");
+
+            str = str + "학년 : " + myform.grade.value + "<br>";
+            str = str + "성별 : " + myform.gender.value + "<br>";
+            str = str + "관심분야 : " + myform.sel_dom.value + "<br>";
+            str = str + "진로(다중 선택) : ";
+            for (var i = 0; i<chboxes.length; i++){
+                if(chboxes[i].checked){
+                    str = str + chboxes[i].value+ " "
+                }
+            }
+            str = str + "<br>남기고 싶음 말 : " + myform.txt_content.value + "<br>";
+            document.write(str);
+        }
+
+    </script>
+    </head>
+    <body>
+        <form name="myform">
+            <hr>
+            <div class="s1">
+                <h1>설문지</h1>
+                <p>소프트웨어 기술에 대한 의견을 듣습니다. 많은 참여 부탁드립니다.</p>
+            </div>
+
+            <div class="s2">
+                <label for="">학년 : </label>
+                <input type="radio" name="grade" id="1st" value="1학년" checked>
+                <label for="1st">1학년</label>
+                <input type="radio" name="grade" id="2nd" value="2학년">
+                <label for="2nd">2학년</label>
+                <input type="radio" name="grade" id="3rd" value="3학년">
+                <label for="3rd">3학년</label>
+                <input type="radio" name="grade" id="4th" value="4학년">
+                <label for="4th">4학년</label> <br> <br>
+
+                <label for="">성별 : </label>
+                <input type="radio" name="gender" id="r_gender_man" value="male"
+                    checked>
+                <label for="r_gender_man">남</label>
+                <input type="radio" name="gender" id="r_gender_woman"
+                    value="female">
+                <label for="r_gender_woman">여</label> <br> <br>
+
+                <label for="">관심분야 : </label>
+                <select name="sel_dom" id="sel_dom">
+                    <option value="데이터분석">데이터분석</option>
+                    <option value="웹 서비스">웹 서비스</option>
+                    <option value="AR/VR">AR/VR</option>
+                    <option value="AI">AI</option>
+                </select> <br><br>
+
+                <label for="">진로(다중 선택) : </label>
+                <input type="checkbox" name="ch" id="ch_개발" value="개발">
+                <label for="ch_개발">개발</label>
+                <input type="checkbox" name="ch" id="ch_기획" value="기획">
+                <label for="ch_기획">기획</label>
+                <input type="checkbox" name="ch" id="ch_영업" value="영업">
+                <label for="ch_영업">영업</label>
+                <input type="checkbox" name="ch" id="ch_창업" value="창업">
+                <label for="ch_창업">창업</label> <br><br>
+
+                <label for="txt_content">남기고 싶은 말</label> <br>
+                <textarea name="txt_content" id="txt_content" cols="40"
+                    rows="5">etc....</textarea> <br><br>
+
+                <input type="button" value="완료" onclick="show()">
+                <input type="reset" value="취소"> <br>
+            </div>
+        </form>
+        <footer>
+            <p>Copyright 2023 by 201727516 김정준</p>
+        </footer>
+    </body>
+</html>
