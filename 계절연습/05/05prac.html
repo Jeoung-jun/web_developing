@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form 연습</title>
+    <style>
+        form{
+            width: 400px;
+        }
+        .c1{
+            padding: 10px;
+            margin: 0px;
+            background-color: goldenrod;
+            color: white;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        #txt_name, #txt_mail{
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        #txt_year, #sel_mon, #txt_day{
+            width: 28%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        span{
+            border: solid gray 1px;
+            padding: 10px;
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding-left: 30px;
+            box-sizing: border-box;
+        }
+        textarea{
+            width: 100%;
+        }
+
+        input[type=button], input[type=reset]{
+            width: 48%;
+            border: none;
+            background-color: goldenrod;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+
+    <script>
+        function show(){
+            var str = "name : ";
+            str += myform.txt_name.value + "<br>";
+            str += "E-mail : " + myform.txt_mail.value + "<br>";
+            str += "birth : " + myform.txt_year.value + " / " + myform.sel_mon.value + " / " + myform.txt_day.value + "<br>";
+            str += "gender : " + myform.gender.value +  "<br>";
+            str += "etc : " + myform.txt_content.value
+
+
+            document.write(str)
+        }
+    </script>
+</head>
+<body>
+    <form name="myform">
+        <div class="c1">
+            Personal apply document
+        </div>
+
+        <div class="c2">
+            <label for="txt_name">name</label> <br>
+            <input type="text" name="txt_name" id="txt_name" placeholder="type name"> <br>
+            <label for="txt_mail">E-mail</label> <br>
+            <input type="text" name="txt_mail" id="txt_mail" placeholder="type Email"> <br>
+            <label for="birth">birth</label> <br>
+            <input type="text" name="birth" id="txt_year" placeholder ="year">
+            <select name="sel_mon" id="sel_mon">
+                <option value="1">1월</option>
+                <option value="2">2월</option>
+                <option value="3">3월</option>
+                <option value="4">4월</option>
+                <option value="5">5월</option>
+                <option value="6">6월</option>
+                <option value="7">7월</option>
+                <option value="8">8월</option>
+                <option value="9">9월</option>
+                <option value="10">10월</option>
+                <option value="11">11월</option>
+                <option value="12">12월</option>
+            </select>
+            <input type="text" name="birth" id="txt_day" placeholder="day"> <br>
+
+            <label for="gender">gender</label><br>
+            <span>
+                <label for="r_gender_man">man</label>
+                <input type="radio" name="gender" id="r_gender_man" value="man">
+                <label for="r_gender_woman">woman</label>
+                <input type="radio" name="gender" id="r_gender_woman" value="woman" checked>
+            </span>
+                <br>
+            <label for="domain">Domain</label><br>
+            <span>
+                <label for="txt_c">C</label>
+                <input type="checkbox" name="domain" id="txt_c">
+                <label for="txt_python">Python</label>
+                <input type="checkbox" name="domain" id="txt_python">
+                <label for="txt_R">R</label>
+                <input type="checkbox" name="domain" id="txt_R">
+                <label for="txt_app">app inventer</label>
+                <input type="checkbox" name="domain" id="txt_app">
+            </span>
+            <br>
+            <label for="txt_content">etc</label><br>
+            <textarea name="txt_content" id="txt_content" cols="30" rows="10"></textarea>
+            <br>
+            <input type="button" value="confirm" onclick="show()">
+            <input type="reset" value="cancel">
+        </div>
+    </form>
+</body>
+</html>

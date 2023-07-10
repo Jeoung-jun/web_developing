@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML연습</title>
+        <style>
+        header, footer{
+            padding: 20px;
+            background-color: steelblue;
+            color: white;
+            text-align: center;
+        }
+        div{
+            float: left;
+            margin: 20px;
+        }
+        header{
+            height: 200px;
+            margin: -10px;
+        }
+        nav{
+            clear: both;
+            background-color: plum;
+            padding: 10px;
+            margin: -10px;
+            margin-bottom: 10px;
+        }
+        img{
+            width: 150px;
+            height: 150px;
+        }
+        .c1>h2{
+            border-style: solid;
+            border-width: 2px 2px 2px 8px;
+            padding: 10px;
+            border-color: orange;
+        }
+        .c1{
+            border-style: solid;
+            border-width: 1px;
+            padding: 10px;
+            border-color: orange;
+            box-sizing: border-box;
+            margin: 10px;
+        }
+
+        .c2>h2{
+            border-style: solid;
+            border-width: 2px 2px 2px 8px;
+            padding: 10px;
+            border-color: blueviolet;
+        }
+
+        .c2{
+            border-style: solid;
+            border-width: 1px;
+            padding: 10px;
+            border-color: blueviolet;
+            box-sizing: border-box;
+            margin: 10px;
+        }
+
+        section p{
+            margin: 10px;
+            color: green;
+            padding: 10px;
+        }
+        section{
+            float: left;
+            width: 45%;
+            height: 200px;
+            margin: 20px;
+            box-sizing: border-box;
+        }
+        footer{
+            clear: both;
+        }
+
+        
+    </style>
+    </head>
+    <body>
+        <header>
+            <div><img src="./img/me.png" alt="my_pic"></div>
+            <div><h1>본인이름</h1>
+                <p>내이름</p></div>
+        </header>
+        <nav>
+            <a href="s1">[개인정보]</a> &nbsp;
+            <a href="s2">[학력사항]</a>&nbsp;
+            <a href="s3">[자격사항]</a>&nbsp;
+            <a href="s4">[자기소개]</a>&nbsp;
+        </nav>
+        <section id="s1" class="c1">
+            <h2>개인정보</h2>
+            <ul>
+                <li>name</li>
+                <li>phone</li>
+                <li>mail</li>
+                <li>address</li>
+            </ul>
+        </section>
+        <section id="s2" class="c2">
+            <h2>학력사항</h2>
+            <ul>
+                <li>univ.</li>
+                <li>high school</li>
+                <li>middle school</li>
+                <li>elementary school</li>
+            </ul>
+        </section>
+        <section id="s3" class="c1">
+            <h2>자격사항</h2>
+            <ul>
+                <li>license no.1</li>
+                <li>license no.2</li>
+                <li>license no.3</li>
+            </ul>
+        </section>
+        <section id="s4" class="c2">
+            <h2>자기소개</h2>
+            <p><a href="./01_ex_학번.html">SWOT 분석</a><br>
+                본인소개를 작성하세요.</p>
+        </section>
+        <footer>
+            &copy;Jeoung-jun Kim add.
+        </footer>
+    </body>
+</html>

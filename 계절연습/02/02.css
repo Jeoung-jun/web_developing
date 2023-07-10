@@ -1,0 +1,31 @@
+header, footer{
+    padding: 10px;
+    background-color: mediumseagreen;
+    text-align: center;
+}
+
+header{
+    margin-top: -10px;
+}
+
+nav{
+    background-color: aquamarine;
+    text-align: center;
+    padding: 20px;
+    margin: 10px 0px;
+}
+
+section{
+    border: solid 3px orange;
+    margin: 10px;
+}
+section h2{
+    background-color: orange;
+    color: white;
+    padding: 5px;
+    margin: 5px;
+}
+
+ul{
+    list-style-type: circle;
+}
