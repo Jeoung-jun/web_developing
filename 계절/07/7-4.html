@@ -16,13 +16,40 @@
         </style>
 
         <script>
-            function show{
+            function show(){
                 var num1 = parseInt(myform.txt1.value);
                 var num2 = parseInt(myform.txt2.value);
-                var num3;
-                num3 = num1+num2;
-                myform.txt3.value = num3;
+                var op = myform.op.value;
+                var result;
+
+                if(op=="+") result = num1+num2;
+                else if(op=="-") result = num1-num2;
+                else if(op=="*") result = num1*num2;
+                else result = num1/num2;
+                myform.txt3.value = result;
                 
+            }
+
+            function show_swi(){
+                var num1 = parseInt(myform.txt1.value);
+                var num2 = parseInt(myform.txt2.value);
+                var op = myform.op.value;
+                var result = 0;
+
+                switch(op){
+                    case "+":
+                        result = num1 + num2;
+                        break;
+                    case "-":
+                        result = num1-num2;
+                        break;
+                    case "*":
+                        result = num1 * num2;
+                        break;
+                    case "/":
+                        result = num1/num2;
+                        break;
+                }
             }
 
 
@@ -33,6 +60,15 @@
         <form name="myform" action="">
             <div class="box">
                 <input type="text" name="txt1" id="txt1" size="6" placeholder="숫자1">
+
+                <select name="op" id="">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    
+
+                </select>
                 
                 <input type="text" name="txt2" id="txt2" size="6" placeholder="숫자2">
                 <input type="button" value="=" onclick="show()">

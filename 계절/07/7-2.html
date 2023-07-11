@@ -4,15 +4,25 @@
     <head>
         <title>7장 javascript2연습</title>
     <script>
-        function show(){
-
+        function show(num){
+            //아래는 if 문입니다.
+            if(num == 1){
                 document.getElementById("p1").innerHTML="<h2>안녕하세요</h2>";
-        }
-
-        function show2(){
-
+                document.getElementById("p2").innerHTML="두번째 영역";
+            }
+            else{
+                document.getElementById("p1").innerHTML="첫번째 영역";
                 document.getElementById("p2").innerHTML="<h2>안녕하세요</h2>";
+            }
+
+            //switch 문
+            switch(case){
+                case 1: 
+                    break;
+                case 2:
+            }
         }
+
 
 
 
@@ -29,8 +39,8 @@
             두번째 영역
         </p>
         <form name="form1" action="">
-            <input type="button" value="첫번째영역" onclick="show()">
-            <input type="button" value="두번째영역" onclick="show2()">
+            <input type="button" value="첫번째영역" onclick="show(1)">
+            <input type="button" value="두번째영역" onclick="show(2)">
 
         </form>
         

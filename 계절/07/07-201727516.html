@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-    <!-- 학번이름 작성일자 7장 Javascript 연산자와 조건문 해결문제-->
+    <!-- 201727516김정준 23/07/10 7장 Javascript 연산자와 조건문 해결문제-->
     <head>
         <title>7장 Javascript 해결문제</title>
         <style>
-            /* .box1 {
+            .box1 {
                 border-radius: 10px;
                 border: 2px solid #73AD21;
                 background-color : #73AD21;
@@ -31,16 +31,73 @@
                 width: 400px;
                 height:50px; 
                 text-align : center;
+                font-size: 24px;
+                color: red;
             }
+            .p1, .p2{
+                width: 13%;
+                float: left;
+                margin: 10px;
+            }
+
+            .p3{
+                clear: both;;
+                text-align: left;
+                background-color: darkkhaki;
+                color: red;
+                padding-left: 50px;
+            }
+
             input[type=button],  input[type=reset]{
-                width : 40px;
+                width : 50px;
                 height : 30px;
-            } */
+            } 
             
         </style>   
                      
         <script>
+            function cal_show(){
 
+                if(myform.txt1.value == ""){
+                    alert("첫번째 숫자를 입력해주세요")
+                    myform.txt1.focus();
+                    return;
+                }
+
+                if(myform.txt2.value == ""){
+                    alert("두번째 숫자를 입력해주세요")
+                    myform.txt2.focus();
+                    return;
+                }
+
+                if(myform.r_op.value == ""){
+                    alert("연산자를 입력해주세요")
+                    return;
+                }
+
+                var num1 = parseInt(myform.txt1.value);
+                var num2 = parseInt(myform.txt2.value);
+                var r_op = myform.r_op.value;
+                var str = "";
+                var result;
+
+                if(r_op=="+") result = num1+num2;
+                else if(r_op=="-") result = num1-num2;
+                else if(r_op=="*") result = num1*num2;
+                else result = num1/num2;
+                
+                if(myform.ck_eval.checked == true){
+                    str = num1 + r_op + num2 + "=" + result;
+                } else str = result;
+
+                document.getElementById('msg').innerHTML =str;
+                
+            }
+
+            function clear(){
+                myform.reset();
+                document.getElementById('msg').innerHTML ="";
+            }
         </script>
     </head>
     <body>
@@ -49,7 +106,7 @@
                 간단한 계산기
             </div>
             <div class="box2">
-                <!-- <p class="p1">
+                <p class="p1">
                     <input type="text" name="txt1" placeholder="숫자1" size="6">
                 </p>
                 <p class="p1">
@@ -66,15 +123,15 @@
                     <input type="text" name="txt2" placeholder="숫자2" size="6">
                 </p>			
                 <p class="p2">
-                    <input type="button" value="=" onclick="">
+                    <input type="button" value="=" onclick="cal_show()">
                 </p>
                 <p class="p2">
-                    <input type="reset" value="취소" onclick="">
+                    <input type="reset" value="취소" onclick="clear()">
                 </p>
                 <p class="p3">
                     <input type="checkbox" name="ck_eval" id="ck_eval">
                     <label for="ck_eval">수식포함</label>
-                </p> -->
+                </p>
                 
             </div>
             <div class="box3">

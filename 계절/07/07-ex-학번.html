@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-    <!-- 학번이름 작성일자 7장 Javascript 연산자와 조건문 응용문제-->
+    <!-- 201727516김정준 2023/07/10 7장 Javascript 연산자와 조건문 응용문제-->
     <head>
         <title>7장 Javascript 응용문제</title>
         <style>
-            /* .box1 {
+            .box1 {
                 border-radius: 10px;
                 border: 2px solid #73AD21;
                 background-color : #73AD21;
@@ -34,10 +34,32 @@
             #msg {
                 width : 97%;
                 height : 40px;
-                border: 1px solid #f0f0f0;
+                border: 1px solid gray;
                 text-align : right;
-            } */
+            } 
         </style>   
+        <script>
+            function show(n){
+                var tmp = document.getElementById('msg').innerHTML
+                tmp += n;
+                document.getElementById('msg').innerHTML = tmp;
+            }
+
+            function cal_show(){
+                var str = document.getElementById('msg').innerHTML;
+                document.getElementById('msg').innerHTML =eval(str);
+            }
+
+            function clear_show(){   //예약어라서 그냥 clear라고 쓰면 안됨
+                document.getElementById('msg').innerHTML="";
+            }
+
+            function clear_last(){
+                str = document.getElementById('msg').innerHTML;
+                str = str.substr(0,str.length-1);
+                document.getElementById('msg').innerHTML=str;
+            }
+        </script>
     </head>
     <body>
         <form name="myform"> 
@@ -46,6 +68,36 @@
             </div>
             <div class="box2">
                 <div id="msg"> </div>
+                <p>
+                    <input type="button" value="CE" onclick="clear_last()">
+                    <input type="button" value="C" onclick="clear_show()">
+                    <input type="button" value="." onclick="show('.')">
+                    <input type="button" value="/" onclick="show('/')">
+                </p>
+                <p>
+                    <input type="button" value="7" onclick="show('7')">
+                    <input type="button" value="8" onclick="show('8')">
+                    <input type="button" value="9" onclick="show('9')">
+                    <input type="button" value="*" onclick="show('*')">
+                </p>
+                <p>
+                    <input type="button" value="4" onclick="show('4')">
+                    <input type="button" value="5" onclick="show('5')">
+                    <input type="button" value="6" onclick="show('6')">
+                    <input type="button" value="-" onclick="show('-')">
+                </p>
+                <p>
+                    <input type="button" value="1" onclick="show('1')">
+                    <input type="button" value="2" onclick="show('2')">
+                    <input type="button" value="3" onclick="show('3')">
+                    <input type="button" value="+" onclick="show('+')">
+                </p>
+                <p>
+                    <input type="button" value="(" onclick="show('(')">
+                    <input type="button" value="0" onclick="show('0')">
+                    <input type="button" value=")" onclick="show(')')">
+                    <input type="button" value="=" onclick="cal_show()">
+                </p>
             </div>
         </form>
     </body>
