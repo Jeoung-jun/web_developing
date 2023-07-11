@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-    <!-- 학번이름 작성일자 8장 Javascript 반복문 해결문제-->
+    <!-- 201727516김정준 23/07/11 8장 Javascript 반복문 해결문제-->
     <head>
         <title>8장 Javascript 반복문 해결문제</title>
         <style>
-            /* .box1 {
+            .box1 {
                 border-radius: 10px;
                 border: 2px solid #73AD21;
                 background-color : #73AD21;
@@ -40,9 +40,9 @@
                 width : 50px;
                 height : 50px;
                 margin-top: 60px;
-            } */
+            }
         </style>
-
+        <script src="./08.js"></script>
     </head>
     <body>
         <form name="myform">
@@ -50,12 +50,24 @@
                 구구단 학습하기
             </div>
             <div class="box2">
+                <select name="sel" id="sel">
+                    <option value="">단선택</option>
+                    <option value="2단">2단</option>
+                    <option value="3단">3단</option>
+                    <option value="4단">4단</option>
+                    <option value="5단">5단</option>
+                    <option value="6단">6단</option>
+                    <option value="7단">7단</option>
+                    <option value="8단">8단</option>
+                    <option value="9단">9단</option>
+                </select>
 
-                <input type="button" value="단보기" onclick="">
-                <input type="button" value="랜덤보기" onclick="">
-                <input type="button" value="지우기" onclick="">
+                <input type="button" value="단보기" onclick="show()">
+                <input type="button" value="랜덤보기" onclick="show_rand()">
+                <input type="button" value="지우기" onclick="show_clear()">
             </div>
             <div id="msg"> </div>
         </form>
     </body>
 </html>
+

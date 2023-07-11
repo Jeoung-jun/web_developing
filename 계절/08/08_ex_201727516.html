@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<!-- 201727516김정준 23/07/11 8장 Javascript 반복문 응용문제 (카드만들기)-->
+	<head>
+		<title>8장 Javascript 반복문 응용(카드만들기)</title>
+
+		<style>
+			
+
+			.box1 {
+				border-radius: 10px;
+				border: 2px solid #73AD21;
+				background-color : #73AD21;
+				padding: 10px; 
+				margin : 10px;
+				width: 400px;
+				height: 20px; 
+				color : white;
+				text-align : center;
+			}
+			.box2 {		 
+				padding: 10px; 
+				margin : 10px;
+				width: 400px; 
+				text-align : center;
+			} 
+			#msg {
+				margin : 10px;
+				padding: 10px;
+				font-size : 14px;
+				color : red;
+				text-align : center;
+			}
+			.card1{
+				border: 2px solid green;
+				background-color: yellow;
+				border-radius: 5px;
+				color: red;
+				width: 50px;
+				height: 60px;
+				font-size: 24px;
+				padding-top: 10px;
+				float: left;
+				margin: 5px;
+			}
+
+			.card2{
+				border: 2px solid green;
+				border-radius: 5px;
+				color: red;
+				width: 50px;
+				height: 60px;
+				font-size: 24px;
+				padding-top: 10px;
+				float: left;
+				margin: 5px;
+			}
+
+			.newline{
+				clear: both;
+			}
+			
+		</style>
+		<script>
+			function show(){
+				if(myform.txt1.value == ""){
+					alert("시작값을 입력해주세요");
+					myform.txt1.focus();
+					return;
+				}
+				if(myform.txt2.value == ""){
+					alert("종료값을 입력해주세요");
+					myform.txt2.focus();
+					return;
+				}
+
+				var num1, num2, str, cnt = 0;
+				num1 = parseInt(myform.txt1.value);
+				num2 = parseInt(myform.txt2.value);
+				str = "";
+				
+				if(num1>num2){
+					var tmp = num1;
+					num1 = num2;
+					num2 = tmp;
+				}
+
+				for(var i = num1; i<=num2; i++){
+					if(i%2 == 0) str = str + "<div class='card1'>" + i + "</div>";
+					else str = str + "<div class='card2'>" + i + "</div>";
+					cnt++;
+					if(cnt%5 == 0) str += "<div class='newline'></div>";
+				}
+				document.getElementById("msg").innerHTML = str;
+			}
+
+			function show_clear(){
+				myform.reset();
+				document.getElementById("msg").innerHTML = "";
+			}
+		</script>
+	</head>
+	<body>
+		<form name="myform">
+			<div class="box1">
+				카드만들기 
+			</div>
+			<div class="box2">
+				시작 <input type="text" name="txt1" size="6">
+				종료 <input type="text" name="txt2" size="6">
+				<input type="button" value="카드보기" onclick="show()">
+				<input type="button" value="지우기" onclick="show_clear()">
+			</div> 	 
+			<div id="msg">
+			</div>
+		</form>
+	</body>
+</html>
