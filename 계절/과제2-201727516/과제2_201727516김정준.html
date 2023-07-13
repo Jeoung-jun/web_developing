@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>201727516김정준</title>
+</head>
+<body>
+    <p>
+        <h1>커피주문하기</h1>
+    </p>
+
+    <section>
+        <h2>[메뉴]</h2>
+        <ul>
+            <li>아메리카노 : 2000원</li>
+            <li>카푸치노 : 3000원</li>
+            <li>카페라떼 : 3500원</li>
+        </ul>
+    </section>
+
+    <form name = "myform">
+        <div>
+            <label for="sel_menu">커피선택 : </label>
+            <select name="sel_menu" id="sel_menu">
+                <option value="아메리카노">아메리카노</option>
+                <option value="카푸치노">카푸치노</option>
+                <option value="카페라떼">카페라떼</option>
+            </select>
+
+            <label for="">사이즈 : </label>
+            <input type="radio" value="Tall" class="size">
+            <label for="Tall사이즈">Tall</label>
+            <input type="radio" value="Tall" class="size">
+            <label for="Grande사이즈">Grande(500원)</label>
+            <input type="radio" value="Tall" class="size">
+            <label for="Venti사이즈">Venti(1000원)</label>
+
+            <label for="cnt">수량 : </label>
+            <input type="button" id="inc">
+            <p id="p1"></p>
+            <input type="button" id="dec">
+
+            <label for="chk">선택사항 : </label>
+            <input type="checkbox" name="chk">
+            <label for="">시럽</label>
+            <input type="checkbox" name="chk">
+            <label for="">샷추가</label>
+            <input type="checkbox" name="chk">
+            <label for="">얼음</label>
+        </div>
+
+        <input type="submit" value="주문하기">
+        <input type="reset" value="취소">
+    </form>
+</body>
+</html>

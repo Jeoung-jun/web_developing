@@ -40,13 +40,48 @@
 			border: 1px solid #73AD21;
 			text-align : center;
 		}
-		.b1 {
-			width : 100px;
-			height :100px;
-			font-size : 30px;
-			text-align : center;
-		}
 </style>
+
+<script>
+	$(document).ready(function(){
+		var total = 0;
+		var success = 0;
+		$("p>img").click(function(){
+			var user = $(this).attr("src");
+			user = user.replace("./img/","");
+			user = user.charAt(0);
+
+			//랜덤 선택
+			var com = Math.floor(Math.random()*6) + 1;
+
+			$("#img1").attr("src", "./img/" + user + ".png");
+			$("#img2").attr("src", "./img/c" + com + ".png");
+
+			//결과
+			var str="";
+			if(user == com){
+				str = "맞췄습니다.";
+				success ++;
+				total ++;
+			}
+			else{
+				str = "틀렸습니다.";
+				total ++;
+			}
+			str = str + "<br> 전체시도횟수 : " + total + ", 맞춘 횟수 : " + success;
+			$("#msg").html(str);
+		});
+
+		$("input[type=button]").click(function(){
+			total = 0;
+			success=0;
+			$("#msg").html("")
+			$("#img1").attr("src", "./img/q.png");
+			$("#img2").attr("src", "./img/q.png");
+		});
+
+	});
+</script>
  
 </head>
 <body>
@@ -66,7 +101,7 @@
 			<img src="./img/6.png">
 			</p>
 			<p>
-			<input type="button" value="다시하기">
+			<input type="button" value="다시하기" id="re">
 			</p>
 		</div>
 		<div id="msgimg">
