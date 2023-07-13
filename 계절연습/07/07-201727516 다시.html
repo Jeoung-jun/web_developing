@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <!-- 201727516김정준 23/07/10 7장 Javascript 연산자와 조건문 해결문제-->
+    <head>
+        <title>7장 Javascript 해결문제</title>
+        <style>
+            .box1 {
+                border-radius: 10px;
+                border: 2px solid #73AD21;
+                background-color : #73AD21;
+                padding: 10px; 
+                margin : 10px;
+                width: 400px;
+                height: 20px; 
+                color : white;
+                text-align : center;
+            }
+            .box2 { 
+                border: 2px solid #73AD21;
+                padding: 10px; 
+                margin : 10px;
+                width: 400px; 
+                height : 150px;
+                text-align : center;
+            }
+            .box3 {
+                border-radius: 10px;
+                border: 2px solid #73AD21;
+                padding: 10px; 
+                margin : 10px;
+                width: 400px;
+                height:50px; 
+                text-align : center;
+                font-size: 24px;
+                color: red;
+            }
+            .p1, .p2{
+                width: 13%;
+                float: left;
+                margin: 10px;
+            }
+
+            .p3{
+                clear: both;;
+                text-align: left;
+                background-color: darkkhaki;
+                color: red;
+                padding-left: 50px;
+            }
+
+            input[type=button],  input[type=reset]{
+                width : 50px;
+                height : 30px;
+            } 
+        </style>
+
+        <script src="./07.js"></script>
+        
+    </head>
+    <body>
+        <form name="myform"> 
+            <div class="box1">
+                간단한 계산기
+            </div>
+            <div class="box2">
+                <p class="p1">
+                    <input type="text" name="txt1" placeholder="숫자1" size="6">
+                </p>
+                <p class="p1">
+                    <input type="radio" name="r_op" id="r_op1" value="+">
+                    <label for="r_op1"> + </label><br>
+                    <input type="radio" name="r_op" id="r_op2" value="-">
+                    <label for="r_op1"> - </label><br>
+                    <input type="radio" name="r_op" id="r_op3" value="*">
+                    <label for="r_op1"> x </label><br>
+                    <input type="radio" name="r_op" id="r_op4" value="/">
+                    <label for="r_op1"> / </label><br>
+                </p>
+                <p class="p1">
+                    <input type="text" name="txt2" placeholder="숫자2" size="6">
+                </p>			
+                <p class="p2">
+                    <input type="button" value="=" onclick="cal_show()">
+                </p>
+                <p class="p2">
+                    <input type="reset" value="취소" onclick="clear_show()">
+                </p>
+                <p class="p3">
+                    <input type="checkbox" name="ck_eval" id="ck_eval">
+                    <label for="ck_eval">수식포함</label>
+                </p>
+                
+            </div>
+            <div class="box3">
+                <div id="msg"> </div>
+            </div>
+        </form>
+
+    </body>
+</html>
