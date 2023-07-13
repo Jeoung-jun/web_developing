@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="UTF-8">
 		<title>jquery연습</title>
 		<style>
-			/* .box1{
+			.box1{
 				border-radius: 10px;
 				border: 2px solid #73AD21;
 				background-color : #73AD21;
@@ -31,9 +32,61 @@
 				height: 20px; 
 				text-align : center;
 				clear : both ;				
-			} */
+			} 
 		</style>
-		 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> 
+		<script>
+
+			$(document).ready(function(){
+				//버튼클릭
+				$("#bt1").click(function(){
+					$(".box2").show();
+				});
+				$("#bt2").click(function(){
+					$(".box2").hide();
+				});
+				$("#bt3").click(function(){
+					$(".box2").toggle();
+				});
+
+				//마우스
+				/*$("#d1").mouseenter(function(){
+					$(this).css({"background-color": $(this).text(), "color" : "white"})
+				});
+				$("#d1").mouseleave(function(){
+					$(this).css({"background-color": "white", "color" : "black"})
+				});
+
+				$("#d2").mouseenter(function(){
+					$(this).css({"background-color": $(this).text(), "color" : "white"})
+				});
+				$("#d2").mouseleave(function(){
+					$(this).css({"background-color": "white", "color" : "black"})
+				});
+
+				$("#d3").mouseenter(function(){
+					$(this).css({"background-color": $(this).text(), "color" : "white"})
+				});
+				$("#d3").mouseleave(function(){
+					$(this).css({"background-color": "white", "color" : "black"})
+				});*/
+
+
+				$(".box2").on({
+					mouseenter: function(){
+						$(this).css({"background-color" : $(this).text(), "color" : "white"});
+					},
+					mouseleave: function(){
+						$(this).css({"background-color" : "white", "color" : "black"});
+					},
+					click: function(){
+						$(this).hide();
+					}
+				});
+
+			})
+		</script>
+
 	</head>
 	<body>
 		<div class="box1">jQuery</div>
