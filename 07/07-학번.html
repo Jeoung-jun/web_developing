@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <!-- 학번이름 작성일자 7장 Javascript 연산자와 조건문 해결문제-->
+    <head>
+        <title>7장 Javascript 해결문제</title>
+        <style>
+            .box1 {
+                border-radius: 10px;
+                border: 2px solid #73AD21;
+                background-color : #73AD21;
+                padding: 10px; 
+                margin : 10px;
+                width: 400px;
+                height: 20px; 
+                color : white;
+                text-align : center;
+            }
+            .box2 { 
+                border: 2px solid #73AD21;
+                padding: 10px; 
+                margin : 10px;
+                width: 400px; 
+                height : 150px;
+                text-align : center;
+            }
+            .box3 {
+                border-radius: 10px;
+                border: 2px solid #73AD21;
+                padding: 10px; 
+                margin : 10px;
+                width: 400px;
+                height:50px; 
+                text-align : center;
+            }
+            input[type=button],  input[type=reset]{
+                width : 40px;
+                height : 30px;
+            }
+
+            .p3{
+                clear: both;
+                background-color: #73AD21;
+                color: red;
+                width: 100%;
+                text-align: left;
+                
+                margin-left: -5px;
+            }
+
+            form p{
+                float:left;
+                
+                margin: 10px;
+            }
+            
+        </style>   
+                     
+        <script>
+            function show(){
+                if(myform.txt1.value == ""){
+                    alert("첫번째 숫자를 입력하세요");
+                    return;
+                }
+
+                if(myform.txt2.value == ""){
+                    alert("두번째 숫자를 입력하세요");
+                    return;
+                }
+
+                if(myform.r_op.value == ""){
+                    alert("연산자를 선택하세요");
+                    return;
+                }
+
+                var num1 = myform.txt1.value ;
+                var num2 = myform.txt2.value;
+                var evl = myform.r_op.value;
+                var ans = num1 + evl + num2;
+
+                if(myform.ck_eval.checked == true){
+                    var str = ans + " = " + eval(ans);
+                    document.getElementById("msg").innerHTML=str;
+                }
+                else{
+                    document.getElementById("msg").innerHTML = eval(ans);
+                }
+                
+                
+
+            }
+
+            function clr_show(){
+
+            }
+
+        </script>
+    </head>
+    <body>
+        <form name="myform"> 
+            <div class="box1">
+                간단한 계산기
+            </div>
+            <div class="box2">
+                <p class="p1">
+                    <input type="text" name="txt1" placeholder="숫자1" size="6">
+                </p>
+                <p class="p1">
+                    <input type="radio" name="r_op" id="r_op1" value="+">
+                    <label for="r_op1"> + </label><br>
+                    <input type="radio" name="r_op" id="r_op2" value="-">
+                    <label for="r_op1"> - </label><br>
+                    <input type="radio" name="r_op" id="r_op3" value="*">
+                    <label for="r_op1"> x </label><br>
+                    <input type="radio" name="r_op" id="r_op4" value="/">
+                    <label for="r_op1"> / </label><br>
+                </p>
+                <p class="p1">
+                    <input type="text" name="txt2" placeholder="숫자2" size="6">
+                </p>			
+                <p class="p2">
+                    <input type="button" value="=" onclick="show()">
+                </p>
+                <p class="p2">
+                    <input type="reset" value="취소" onclick="clr_show()">
+                </p>
+                <p class="p3">
+                    <input type="checkbox" name="ck_eval" id="ck_eval">
+                    <label for="ck_eval">수식포함</label>
+                </p>
+                
+            </div>
+            <div class="box3">
+                <div id="msg"> </div>
+            </div>
+        </form>
+
+    </body>
+</html>
