@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- 학번이름	작성일자 	// 11장 자바스크립트 배열을 이용한 jQuery응용 해결문제 -->
+<!-- 201727516김정준 23/07/17  	// 11장 자바스크립트 배열을 이용한 jQuery응용 해결문제 -->
 <html>
 	<head>
 		<title>11장 자바스크립트 배열을 이용한 jQuery응용 해결문제</title>
@@ -39,10 +39,60 @@
 				text-align:center;
 		}
 		</style>
- 
+		<script>
+			var num = [0,0,0,0,0,0,0,0,1], flag = false, cnt = 0;
+
+			function shuffle(){
+				for(var i = 0; i<num.length; i++){
+					var idx1 = Math.floor(Math.random()*9);
+					var idx2 = Math.floor(Math.random()*9);
+
+					if(idx1 != idx2){
+						var tmp = num[idx1];
+						num[idx1] = num[idx2];
+						num[idx2] = tmp;
+					}
+				}
+				console.log(num);
+			}
+			$(document).ready(function(){
+				$("#btn1").click(function(){
+					shuffle();
+					$("#msg").html("");
+					for(var i = 1; i <=9; i++){
+						var htmlstr = "<img class='imgBox' src='./img/q.png' id='img" + i + "'>";
+						$("#div"+i).html(htmlstr);
+					}
+					
+				});
+
+				$(".box1").on("click", ".imgBox", function(event){
+					var id = $(this).attr("id").replace("img","");
+					id = parseInt(id)-1;
+
+					if($(this).attr("src") == "./img/q.png"){
+						if(num[id] == 0){
+							$(this).attr("src", "./img/hart.png");
+							cnt ++;
+							if(cnt==8){
+								$("#msg").html("성공");
+								$(".imgBox").attr("src","./img/hart.png");
+								return;
+							}
+						}
+						else{
+							$(this).attr("src", "./img/boom.png");
+							$("#msg").html("실패");
+							return;
+						}
+					}
+				});
+			});
+		</script>
 	</head>
 	
 	<body>	
+		
 		<div id="box">
 			<div class="box1" id="div1"></div>
 			<div class="box1" id="div2"></div>
