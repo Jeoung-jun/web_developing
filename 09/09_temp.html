@@ -39,6 +39,32 @@
 			}
 		</style>
 		<script>
+			$(document).ready(function(){
+				$("#sel1").change(function(){
+					$("#img1").attr("src","./img/"+ $(this).val()+".png");
+
+					var str = "https://";
+					switch($(this).val()){
+						case("google"):
+							str += "google.com";
+							break;
+
+						case("naver"):
+							str += "naver.com";
+							break;
+
+						case("daum"):
+							str += "daum.net";
+							break;
+					}
+					$("#a1").attr("href",str);
+					$("#p1").html("<a href='" + str + "'>" + str +"</a>");
+					
+				});
+			});
+
+
+			
 		</script>
  
 	</head>

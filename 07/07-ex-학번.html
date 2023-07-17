@@ -39,6 +39,28 @@
                 text-align : right;
             } 
         </style>   
+        <script>
+            var str = "";
+            function clear_show(){
+                str = "";
+                document.getElementById("msg").innerHTML = "";
+            }
+
+            function clear_last(){
+                str = str.substr(0,str.length-1);
+                document.getElementById("msg").innerHTML = str;
+            }
+
+            function show(n){
+                str += n;
+                document.getElementById("msg").innerHTML = str;
+            }
+
+            function result(){
+                str = "";
+                document.getElementById("msg").innerHTML = eval(str);
+            }
+        </script>
     </head>
     <body>
         <form name="myform"> 
@@ -48,34 +70,34 @@
             <div class="box2">
                 <div id="msg"> </div>
                 <div>
-                    <input type="button" value="CE" onclick="">
-                    <input type="button" value="C" onclick="">
-                    <input type="button" value="." onclick="">
-                    <input type="button" value="/" onclick="">
+                    <input type="button" value="CE" onclick="clear_last()">
+                    <input type="button" value="C" onclick="clear_show()">
+                    <input type="button" value="." onclick="show('.')">
+                    <input type="button" value="/" onclick="show('/')">
                 </div>
                 <div>
-                    <input type="button" value="7" onclick="">
-                    <input type="button" value="8" onclick="">
-                    <input type="button" value="9" onclick="">
-                    <input type="button" value="*" onclick="">
+                    <input type="button" value="7" onclick="show(7)">
+                    <input type="button" value="8" onclick="show(8)">
+                    <input type="button" value="9" onclick="show(9)">
+                    <input type="button" value="*" onclick="show('*')">
                 </div>
                 <div>
-                    <input type="button" value="4" onclick="">
-                    <input type="button" value="5" onclick="">
-                    <input type="button" value="6" onclick="">
-                    <input type="button" value="-" onclick="">
+                    <input type="button" value="4" onclick="show(4)">
+                    <input type="button" value="5" onclick="show(5)">
+                    <input type="button" value="6" onclick="show(6)">
+                    <input type="button" value="-" onclick="show('-')">
                 </div>
                 <div>
-                    <input type="button" value="1" onclick="">
-                    <input type="button" value="2" onclick="">
-                    <input type="button" value="3" onclick="">
-                    <input type="button" value="+" onclick="">
+                    <input type="button" value="1" onclick="show(1)">
+                    <input type="button" value="2" onclick="show(2)">
+                    <input type="button" value="3" onclick="show(3)">
+                    <input type="button" value="+" onclick="show('+')">
                 </div>
                 <div>
-                    <input type="button" value="(" onclick="">
-                    <input type="button" value="0" onclick="">
-                    <input type="button" value=")" onclick="">
-                    <input type="button" value="=" onclick="">
+                    <input type="button" value="(" onclick="show('(')">
+                    <input type="button" value="0" onclick="show(0)">
+                    <input type="button" value=")" onclick="show(')')">
+                    <input type="button" value="=" onclick="result()">
                 </div>
             </div>
             <!-- <div style = "clear:both"></div> -->

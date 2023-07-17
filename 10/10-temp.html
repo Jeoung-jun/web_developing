@@ -47,7 +47,36 @@
 			text-align : center;
 		}
 </style>
- 
+<script>
+	$(document).ready(function(){
+		var cnt = 0, correct = 0;
+		
+		$("p > img").click(function(){
+			cnt ++;
+			var tmp = $(this).attr("src");
+			tmp = tmp.replace("./img/","");
+			tmp = parseInt(tmp.charAt(0));
+			$("#img1").attr("src", $(this).attr("src"));
+
+			var rand = Math.floor(Math.random()*6)+1;
+			$("#img2").attr("src","./img/c" + rand + ".png");
+
+			if(tmp == rand){
+				$("#msg").html("맞췄습니다.<br>");
+				correct++;
+			}
+			else{
+				$("#msg").html("틀렸습니다.<br>");
+			}
+			$("#msg").html("전체 횟수 : " + cnt + " 맞춘 횟수 : " + correct);
+		});
+
+		$("#re").click(function(){
+			$("#img1").attr("src", "./img/q.png");
+			$("#img2").attr("src", "./img/q.png");
+		});
+	});
+</script>
 </head>
 <body>
 	<form name="myform">
@@ -66,7 +95,7 @@
 			<img src="./img/6.png">
 			</p>
 			<p>
-			<input type="button" value="다시하기">
+			<input type="button" value="다시하기" id="re">
 			</p>
 		</div>
 		<div id="msgimg">

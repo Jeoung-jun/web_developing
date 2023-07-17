@@ -4,7 +4,7 @@
     <head>
         <title>8장 Javascript 반복문 해결문제</title>
         <style>
-            /* .box1 {
+            .box1 {
                 border-radius: 10px;
                 border: 2px solid #73AD21;
                 background-color : #73AD21;
@@ -40,20 +40,68 @@
                 width : 50px;
                 height : 50px;
                 margin-top: 60px;
-            } */
+            } 
         </style>
+        <script>
+            function show(){
+                var str = "", val = myform.sel_dan.value;
+                if(val == ""){
+                    alert("단을 선택하세요.");
+                    return;
+                }
+                for(var i = 1; i<=9; i++){
+                    str += val + " X " + i + " = " + (parseInt(val) * i) + "<br>";
+                }
+                document.getElementById("msg").innerHTML = str;
+            }
+
+            function rand_show(){
+                var num1, num2, res;
+                num1 = Math.floor(Math.random()*8) + 2;
+                num2 = Math.floor(Math.random()*9) + 1;
+                res = num1 * num2;
+                num1 = "<img src='./img/" + num1 + ".png'>"
+                num2 = "<img src='./img/" + num2 + ".png'>"
+                r1 = res%10;
+                r1= "<img src='./img/" + r1 + ".png'>"
+                r10 = Math.floor(res/10);
+                
+
+                if(r10 == "")
+                    r10 = "<img src='./img/blank.png'>";
+                else    
+                    r10 = "<img src='./img/" + r10 + ".png'>";
+                
+                document.getElementById("msg").innerHTML = num1 + "<img src='./img/x.png'>" + num2 + "<img src='./img/equal.png'>" + r10 + r1;
+            }
+
+            function clear_show(){
+                document.getElementById("msg").innerHTML = "";
+            }
+        </script>
 
     </head>
     <body>
+        
         <form name="myform">
             <div class="box1">
                 구구단 학습하기
             </div>
             <div class="box2">
-
-                <input type="button" value="단보기" onclick="">
-                <input type="button" value="랜덤보기" onclick="">
-                <input type="button" value="지우기" onclick="">
+                <select name="" id="sel_dan">
+                    <option value="">단선택</option>
+                    <option value="2">2단</option>
+                    <option value="3">3단</option>
+                    <option value="4">4단</option>
+                    <option value="5">5단</option>
+                    <option value="6">6단</option>
+                    <option value="7">7단</option>
+                    <option value="8">8단</option>
+                    <option value="9">9단</option>
+                </select>
+                <input type="button" value="단보기" onclick="show()">
+                <input type="button" value="랜덤보기" onclick="rand_show()">
+                <input type="button" value="지우기" onclick="clear_show()">
             </div>
             <div id="msg"> </div>
         </form>
