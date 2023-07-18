@@ -31,68 +31,62 @@
                 width: 400px;
                 height:50px; 
                 text-align : center;
+                
             }
             input[type=button],  input[type=reset]{
                 width : 40px;
                 height : 30px;
+            } 
+            p{
+                float: left;
+                margin: 10px;
             }
-
             .p3{
                 clear: both;
                 background-color: #73AD21;
-                color: red;
-                width: 100%;
                 text-align: left;
-                
-                margin-left: -5px;
+                box-sizing: border-box;
+                width: 400px;
+                margin-left: 0px;
+                padding: 0px 10px;
+                color: red;
             }
 
-            form p{
-                float:left;
-                
-                margin: 10px;
-            }
             
         </style>   
                      
         <script>
             function show(){
                 if(myform.txt1.value == ""){
-                    alert("첫번째 숫자를 입력하세요");
+                    alert("첫번째 값을 입력하세요");
                     return;
                 }
 
                 if(myform.txt2.value == ""){
-                    alert("두번째 숫자를 입력하세요");
+                    alert("두번째 값을 입력하세요");
                     return;
                 }
 
                 if(myform.r_op.value == ""){
-                    alert("연산자를 선택하세요");
+                    alert("연산자를 입력하세요");
                     return;
                 }
 
-                var num1 = myform.txt1.value ;
-                var num2 = myform.txt2.value;
-                var evl = myform.r_op.value;
-                var ans = num1 + evl + num2;
-
+                var str = "";
+                str += myform.txt1.value + myform.r_op.value + myform.txt2.value;
                 if(myform.ck_eval.checked == true){
-                    var str = ans + " = " + eval(ans);
-                    document.getElementById("msg").innerHTML=str;
+                    document.getElementById("msg").innerHTML = str + " = " + eval(str);
                 }
                 else{
-                    document.getElementById("msg").innerHTML = eval(ans);
+                    document.getElementById("msg").innerHTML = eval(str);
                 }
-                
-                
-
             }
 
-            function clr_show(){
-
+            function clear_show(){
+                myform.txt1.value = "";
+                myform.txt2.value = "";
+                document.getElementById('msg').innerHTML ="";
             }
-
         </script>
     </head>
     <body>
@@ -121,7 +115,7 @@
                     <input type="button" value="=" onclick="show()">
                 </p>
                 <p class="p2">
-                    <input type="reset" value="취소" onclick="clr_show()">
+                    <input type="reset" value="취소" onclick="clear_show()">
                 </p>
                 <p class="p3">
                     <input type="checkbox" name="ck_eval" id="ck_eval">

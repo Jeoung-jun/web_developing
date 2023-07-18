@@ -41,34 +41,30 @@
 		<script>
 			$(document).ready(function(){
 				$("#sel1").change(function(){
-					$("#img1").attr("src","./img/"+ $(this).val()+".png");
-
-					var str = "https://";
-					switch($(this).val()){
-						case("google"):
-							str += "google.com";
+					var eng = $(this).val();
+					switch(eng){
+						case "google":
+							$("#img1").attr("src", "./img/google.png");
+							$("#p1").html('<a href="https://www.google.com">https://www.google.com</a>');
 							break;
 
-						case("naver"):
-							str += "naver.com";
+						case "daum":
+							$("#img1").attr("src", "./img/daum.png");
+							$("#p1").html('<a href="https://www.daum.net">https://www.daum.net</a>');
 							break;
 
-						case("daum"):
-							str += "daum.net";
+						case "naver":
+							$("#img1").attr("src", "./img/naver.png");
+							$("#p1").html('<a href="https://www.naver.com">https://www.naver.com</a>')
 							break;
 					}
-					$("#a1").attr("href",str);
-					$("#p1").html("<a href='" + str + "'>" + str +"</a>");
-					
 				});
 			});
-
-
-			
 		</script>
  
 	</head>
 	<body>
+		
 		<div class="box1">jQuery</div>
 		<div class="box2" id="d1">
 			<a  id="a1"> <img id="img1"> </a>

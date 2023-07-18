@@ -47,17 +47,30 @@
 		</style>
 		<script>
 			$(document).ready(function(){
-				var cnt = 0, win = 0;
+				var win= 0, cnt = 0;
 				$("p>img").click(function(){
 					cnt ++;
-					var tmp = parseInt($(this).attr("id").charAt(1));
-					var com = Math.floor(Math.random()*3) + 1;
-					$("#img1").attr("src", $(this).attr("src"));
+					var id = parseInt($(this).attr("id").charAt(1));
+					switch(id){
+						case 1:
+							$("#img1").attr("src", "./img/scissors.png");
+							break;
+						
+						case 2:
+							$("#img1").attr("src", "./img/rock.png");
+							break;
+
+						case 3:
+							$("#img1").attr("src", "./img/paper.png");
+							break;
+					}
+
+					var com = Math.floor(Math.random()*3)+1;
 					switch(com){
 						case 1:
 							$("#img2").attr("src", "./img/scissorscom.png");
 							break;
-
+						
 						case 2:
 							$("#img2").attr("src", "./img/rockcom.png");
 							break;
@@ -67,17 +80,26 @@
 							break;
 					}
 
-					if((tmp == 1 && com == 3) || (tmp == 2 && com == 1) || (tmp == 3 && com == 2)){
+					var str = "";
+					if((id == 1 && com == 3) || (id == 2 && com == 1) || (id == 3 && com ==2)){
 						win ++;
-						$("#msg").html("이겼습니다.<br>");
+						str += "이겼습니다.<br>";
 					}
-					else if (tmp == com){
-						$("#msg").html("비겼습니다.<br>");
-					}
-					else{
-						$("#msg").html("졌습니다.<br>");
-					}
-					$("#msg").html("전체 횟수 : " + cnt + " 이긴 횟수 " + win +"  ("+ (win/cnt * 100).toFixed(2) + ")");
+					else if(id == com)
+						str += "비겼습니다.<br>";
+					else
+						str += "졌습니다.<br>";
+					
+					str += "시도 횟수 : " + cnt + ", 이긴 횟수 : " + win + " (" + (win/cnt * 100).toFixed(2)+ "%)";
+					$("#msg").html(str);
+				});
+
+				$("#bt1").click(function(){
+					cnt = 0;
+					win = 0;
+					$("#msg").html("");
+					$("#img1").attr("src", "./img/q.png");
+					$("#img2").attr("src", "./img/q.png");
 				});
 			});
 		</script>

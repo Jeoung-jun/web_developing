@@ -29,29 +29,28 @@
 				color : red;
 				text-align : center;
 			}
-
 			.card1{
-				border: 2px solid green;
+				float: left;
 				background-color: yellow;
-				border-radius: 5px;
 				color: red;
+				border: #73AD21 2px solid;
 				width: 50px;
 				height: 60px;
 				font-size: 24px;
 				padding-top: 10px;
-				float: left;
+				border-radius: 5px;
 				margin: 5px;
 			}
 
 			.card2{
-				border: 2px solid green;
-				border-radius: 5px;
+				float: left;
 				color: red;
+				border: #73AD21 2px solid;
 				width: 50px;
 				height: 60px;
 				font-size: 24px;
 				padding-top: 10px;
-				float: left;
+				border-radius: 5px;
 				margin: 5px;
 			}
 
@@ -62,45 +61,49 @@
 		</style>
 		<script>
 			function show(){
-				if(myform.txt1.value==""){
-					alert("시작값을 입력하세요.")
+				var num1 = myform.txt1.value;
+				var num2 = myform.txt2.value;
+				var str = "";
+				if(num1 == ""){
+					alert("type first number");
 					myform.txt1.focus();
 					return;
 				}
-				if(myform.txt2.value==""){
-					alert("종료값을 입력하세요.")
+				if(num2 == ""){
+					alert("type second number");
 					myform.txt2.focus();
 					return;
 				}
-				var start = myform.txt1.value, end = myform.txt2.value;
-				if(start> end){
-					var tmp = start;
-					start = end;
-					end = tmp;
+
+				if(parseInt(num1) > parseInt(num2)){
+					var tmp = num1;
+					num1 = num2;
+					num2 = tmp;
 				}
 
-				var cnt = 0, str = "";
-				for(var i = start; i<=end; i++){
+				var cnt = 0;
+				for(var i = parseInt(num1); i<=parseInt(num2); i++){
+					cnt ++;
 					if(i%2 == 0)
-						str += "<div class = 'card1'>" + i + "</div>"
+						str += "<div class = 'card1'>" + i + "</div>";
 					else
-						str += "<div class = 'card2'>" + i + "</div>"
-
-					cnt++;
+						str += "<div class = 'card2'>" + i + "</div>";
+					
 					if(cnt%5 == 0)
 						str += "<div class = 'newline'></div>";
 				}
 
 				document.getElementById("msg").innerHTML = str;
+				
 			}
 
-			function clear_show(){
-
+			function res(){
+				myform.reset();
+				document.getElementById("msg").value= "";
 			}
 		</script>
 	</head>
 	<body>
-		
 		<form name="myform">
 			<div class="box1">
 				카드만들기 
@@ -109,7 +112,7 @@
 				시작 <input type="text" name="txt1" size="6">
 				종료 <input type="text" name="txt2" size="6">
 				<input type="button" value="카드보기" onclick="show()">
-				<input type="button" value="지우기" onclick="clear_show()">
+				<input type="button" value="지우기" onclick="res()">
 			</div> 	 
 			<div id="msg">
 			</div>

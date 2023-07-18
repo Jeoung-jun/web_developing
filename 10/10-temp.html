@@ -46,37 +46,38 @@
 			font-size : 30px;
 			text-align : center;
 		}
-</style>
-<script>
-	$(document).ready(function(){
-		var cnt = 0, correct = 0;
-		
-		$("p > img").click(function(){
-			cnt ++;
-			var tmp = $(this).attr("src");
-			tmp = tmp.replace("./img/","");
-			tmp = parseInt(tmp.charAt(0));
-			$("#img1").attr("src", $(this).attr("src"));
+	</style>
 
-			var rand = Math.floor(Math.random()*6)+1;
-			$("#img2").attr("src","./img/c" + rand + ".png");
+	<script>
+		$(document).ready(function(){
+			var win = 0, cnt =0;
 
-			if(tmp == rand){
-				$("#msg").html("맞췄습니다.<br>");
-				correct++;
-			}
-			else{
-				$("#msg").html("틀렸습니다.<br>");
-			}
-			$("#msg").html("전체 횟수 : " + cnt + " 맞춘 횟수 : " + correct);
+			$("p>img").click(function(){
+				var str = "";
+				cnt++;
+				var id = $(this).attr("src").replace("./img/","");
+				id = id.charAt(0);
+				$("#img1").attr("src","./img/" + id + ".png");
+
+				var com = Math.floor(Math.random()*6)+1;
+				$("#img2").attr("src","./img/c" + com + ".png");
+
+				if(parseInt(id) == com){
+					str += "맞췄습니다.<br>";
+					win++;
+				}	
+				else str += "틀렸습니다.<br>";
+				str += "전체 횟수 : "+ cnt + ", 맞춘 횟수 : " + win;
+				$("#msg").html(str);
+			});
+
+			$("#bt1").click(function(){
+				cnt = 0;
+				win = 0;
+				$("#msg").html("");
+			});
 		});
-
-		$("#re").click(function(){
-			$("#img1").attr("src", "./img/q.png");
-			$("#img2").attr("src", "./img/q.png");
-		});
-	});
-</script>
+	</script>
 </head>
 <body>
 	<form name="myform">
@@ -95,7 +96,7 @@
 			<img src="./img/6.png">
 			</p>
 			<p>
-			<input type="button" value="다시하기" id="re">
+			<input type="button" value="다시하기" id = "bt1">
 			</p>
 		</div>
 		<div id="msgimg">
